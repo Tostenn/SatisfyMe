@@ -12,7 +12,8 @@ db.exec(`
     satisfaction TEXT NOT NULL CHECK (satisfaction IN ('Satisfait', 'Mécontent')),
     service TEXT NOT NULL,
     commentaire TEXT DEFAULT '',
-    createdAt TEXT NOT NULL
+    createdAt TEXT NOT NULL,
+    updatedAt TEXT NOT NULL
   )
 `);
 

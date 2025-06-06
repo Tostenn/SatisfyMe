@@ -14,6 +14,11 @@ const createUser = async ({ username, email, password, role = 'Responsable Quali
   return info.lastInsertRowid;
 };
 
+const findUserByUsername = (username) => {
+  const stmt = db.prepare('SELECT * FROM users WHERE username = ?');
+  return stmt.get(username.trim());
+};
+
 const findUserByEmail = (email) => {
   const stmt = db.prepare('SELECT * FROM users WHERE email = ?');
   return stmt.get(email.trim().toLowerCase());
@@ -35,5 +40,6 @@ if (!findUserByEmail('a@b.com'))
 module.exports = {
   createUser,
   findUserByEmail,
+  findUserByUsername,
   comparePassword
 };
