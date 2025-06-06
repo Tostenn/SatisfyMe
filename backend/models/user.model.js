@@ -23,6 +23,15 @@ const comparePassword = async (plain, hash) => {
   return bcrypt.compare(plain, hash);
 };
 
+// add a new user admin
+if (!findUserByEmail('a@b.com'))
+  createUser({
+    username: 'admin',
+    email: 'a@b.com',
+    password: 'password',
+    role: 'Directrice Générale'
+  });
+
 module.exports = {
   createUser,
   findUserByEmail,
