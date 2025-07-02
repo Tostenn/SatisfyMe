@@ -24,7 +24,7 @@ Application simple et intuitive permettant de recueillir l’avis des visiteurs 
 
 3. Installez les dépendances du frontend :
     ```bash
-    cd SatisfyMe/frontend
+    cd SatisfyMe/fontend
     npm install
     ```
 
@@ -36,7 +36,7 @@ Application simple et intuitive permettant de recueillir l’avis des visiteurs 
 
 5. Démarrez le frontend :
     ```bash
-    cd SatisfyMe/frontend
+    cd SatisfyMe/fontend
     npm run dev
     ```
 
